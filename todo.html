@@ -8,29 +8,96 @@
 <body>
     <!-- TODO List -->
 
+    <div class="container">
+        <div class="input-container">
     <input id="input">
     <button onclick="add()">Add</button>
+    </div>
     <ul id="list-container">
         <li>Hello
             <button onclick="deleteItem(event)">Delete</button>
         </li>
     </ul>
-    <style>
-        input{
-            align-items:center;
-            padding-left: 50px;
-            padding-top: 50px;
-        }
-        button{
-            align-items: center;
-            border-radius:100px;
-            
-        }
-        ul{
-            align-items: center;
-        }
-    </style>
+    </div>
 
+    <!--Styles-->
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(196, 98, 98);
+    }
+    
+    .container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .input-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    
+    input {
+        width: calc(100% - 70px);
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-right: 10px;
+    }
+    
+    button {
+        justify-content: center;
+        padding: 8px 16px;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: lightblue;
+    }
+    
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    li {
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-radius: 4px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    li button {
+        background-color: #dc3545;
+        color: #fff;
+        border: none;
+        padding: 4px 8px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    li button:hover {
+        background-color: #af3541;
+    }
+    
+    </style>
+    
+    <!--Script-->
     <script>
 
         var ul = document.getElementById("list-container")
